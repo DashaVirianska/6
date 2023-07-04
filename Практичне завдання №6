@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+// Функція для обчислення довжини вектора
+double calculateVectorLength(int x1, int y1, int x2, int y2) {
+    // Використовуємо формулу для обчислення відстані між двома точками у 2D просторі
+    double length = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    
+    return length;
+}
+
+int main() {
+    int x1, y1, x2, y2;
+    double result;
+
+    printf("Введіть координати початку та кінця вектора (x1 y1 x2 y2): ");
+    scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+    // Обчислюємо довжину вектора
+    result = calculateVectorLength(x1, y1, x2, y2);
+
+    printf("Довжина вектора: %.6f\n", result);
+
+    return 0;
+}
